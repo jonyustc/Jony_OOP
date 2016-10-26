@@ -3,8 +3,9 @@
 require_once('autoload.php');
 
 use Jony\App\Repositories\PostJsonRepositories;
+use Jony\App\Repositories\PostXMLRepositories;
 
-$postsRepo=new PostJsonRepositories();
+$postsRepo=new PostXMLRepositories();
 
 $posts=$postsRepo->all();
 $pos=$postsRepo->find(1);
