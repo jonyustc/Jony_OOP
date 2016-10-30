@@ -8,14 +8,20 @@ namespace Jony\App;
 
 class User 
 {
+	use \Jony\App\Traits\Curlable;
+	use \Jony\App\Traits\Accessible;
+
 	protected $email;
 	protected $password;
-	protected $fillable=array('email','password');
-	protected $accessible=array('email','password');
+	protected $facebookid;
 	
 
 	public function __construct(Array $param=array())
 	{
+
+		$this->fillable[] = 'facebookid';
+		$this->accessible[] = 'facebookid';
+
 		if(count($param)){
 			foreach ($param as $key => $value) {
 				# code...
@@ -25,25 +31,13 @@ class User
 		}
 	}
 
-	public  function __set($name,$value)
+	public function getFacebookData()
 	{
-		if(!in_array($name, $this->fillable)){
-			return false;
-		}
-
-		if(isset($this->$name)){
-			$this->$name=$value;
-		}
+		$url= 'http://graph.facebook.com/' . $this->facebookid;
+		return json_decode($this->curl($url),true);
 	}
 
-	public function __get($name)
-	{
-		if(!in_array($name, $this->accessible)){
-			return null;
-		}
-
-		return isset($this->$name) ? $this->$name : null;
-	}
+	
 
 	public function __tostring()
 	{
@@ -57,6 +51,8 @@ class User
 
 		return json_encode($data);
 	}
+
+
 
 	public function setPassword($string)
 	{
