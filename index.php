@@ -2,12 +2,18 @@
 
 require_once('autoload.php');
 
+$addressRepository= new \Jony\App\Repositories\AddressArrayRepository();
 
-$admin=new Jony\App\Administrator();
-$admin->facebookid='1547534805552048';
+$addressRepo=new Jony\App\Address($addressRepository);
+$address=$addressRepo->Find(2);
 echo "<pre>";
-var_dump($admin->facebookid);
-var_dump($admin->getFacebookData());
+var_dump($address->city);
+
+// $admin=new Jony\App\Administrator();
+// $admin->facebookid='1547534805552048';
+// echo "<pre>";
+// var_dump($admin->facebookid);
+// var_dump($admin->getFacebookData());
 
 
 
