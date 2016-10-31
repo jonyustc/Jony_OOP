@@ -1,12 +1,12 @@
 <?php
 
-namespace Jony\App;
+namespace App;
 
-use Jony\App\Repositories\AddressRepositoryInterface;
+use App\Repositories\AddressRepositoryInterface;
 
 class Address
 {
-	use \Jony\App\Traits\Accessible;
+	use \App\Traits\Accessible;
 
 	protected $street;
 	protected $city;

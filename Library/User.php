@@ -1,8 +1,8 @@
 <?php
 
-namespace Jony\Library;
+namespace Library;
 
-use Jony\App\User as AppUser;
+use App\User as AppUser;
 
 class User
 {

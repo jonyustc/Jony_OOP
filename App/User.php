@@ -4,12 +4,12 @@
 * 
 */
 
-namespace Jony\App;
+namespace App;
 
 class User 
 {
-	use \Jony\App\Traits\Curlable;
-	use \Jony\App\Traits\Accessible;
+	use \App\Traits\Curlable;
+	use \App\Traits\Accessible;
 
 	protected $email;
 	protected $password;

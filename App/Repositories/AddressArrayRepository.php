@@ -1,6 +1,6 @@
 <?php
 
-namespace Jony\App\Repositories;
+namespace App\Repositories;
 
 class AddressArrayRepository implements AddressRepositoryInterface
 {
@@ -11,7 +11,7 @@ class AddressArrayRepository implements AddressRepositoryInterface
 		$this->addressess= $this->getAddress();
 	}
 
-	public function Find($id,\Jony\App\Address $address)
+	public function Find($id,\App\Address $address)
 	{
 		if(isset($this->addressess[$id])){
 			foreach ($this->addressess[$id] as $key => $value) {

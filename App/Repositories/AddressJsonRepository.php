@@ -1,11 +1,11 @@
 <?php
 
-namespace Jony\App\Repositories;
+namespace App\Repositories;
 
 class AddressJsonRepository implements AddressRepositoryInterface
 {
 
-	public function Find($id, \Jony\App\Address $address)
+	public function Find($id, \App\Address $address)
 	{
 	
 	}

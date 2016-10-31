@@ -1,6 +1,6 @@
 <?php
 
-namespace Jony\App\Traits;
+namespace App\Traits;
 
 trait Accessible
 {

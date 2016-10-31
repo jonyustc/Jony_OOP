@@ -2,9 +2,9 @@
 
 require_once('autoload.php');
 
-$addressRepository= new \Jony\App\Repositories\AddressArrayRepository();
+$addressRepository= new \App\Repositories\AddressArrayRepository();
 
-$addressRepo=new Jony\App\Address($addressRepository);
+$addressRepo=new App\Address($addressRepository);
 $address=$addressRepo->Find(2);
 echo "<pre>";
 var_dump($address->city);

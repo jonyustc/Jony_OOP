@@ -1,6 +1,6 @@
 <?php
 
-namespace Jony\App\Repositories;
+namespace App\Repositories;
 
 interface PostRepositoriesInterface
 {
