@@ -7,7 +7,7 @@ require __DIR__.'/../autoload.php';
 $addressRepository= new \App\Repositories\AddressArrayRepository();
 
 $addressRepo=new App\Address($addressRepository);
-$address=$addressRepo->Find(1);
+$address=$addressRepo->Find(2);
 echo "<pre>";
 var_dump($address->city);
 
